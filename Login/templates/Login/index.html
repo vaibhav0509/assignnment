@@ -1,0 +1,15 @@
+{% extends "Login/base.html" %}
+{% block content %}
+
+<div class="jumbotron jumbo-f mt-6 ">
+    <div class="container">
+                <p>
+                    {% if user.is_authenticated  %}
+                    <h1> {{user.username}}!!</h1>
+                     {%else%}
+                      <h1>!!</h1>
+                      {% endif %}
+                </p>
+    </div>
+</div>
+{% endblock content %}

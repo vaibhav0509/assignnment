@@ -1,0 +1,40 @@
+{% extends "Login/base.html" %}
+{%block content%}
+
+<div class="content-section" >
+    <form method="POST" action="">
+        {%csrf_token%}
+        <fieldset class="form-group" >
+            <legend class="border-bottom mb-4"></legend>
+                {{form.as_p}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">
+                Sign UP
+            </button>
+        </div>
+    </form>
+    <div  class = "border-top pt-3" >
+        <ul>
+                <small class="text-muted">
+                        Hello,  Already have an account ?
+                        <a href="{% url 'login' %}">Sign In</a>
+               </small>
+
+        </ul>
+
+        <ul>
+                <small class="text-muted">
+                        Go Home...
+                        <a href="{% url 'index' %}">Home</a>
+                </small>
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+
+{%endblock content%}
